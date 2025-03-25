@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 * {
     font-family: 'Poppins', sans-serif;
@@ -183,4 +184,191 @@ footer {
         font-size: 1.2rem;
         margin-left: 0;
     }
+=======
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: white;
+    color: black; 
+    font-family: 'Poppins', sans-serif;
+}
+
+.parrafo-intro{
+
+    font-size: 1.6rem ;
+}
+
+@media (max-width: 480px){
+
+    .parrafo-intro{
+        font-size: 1.4rem;
+    }
+
+}
+
+
+/* ############################################ index html ######################################### */
+
+.navbar-nav .nav-link{
+
+    font-size: 2rem; /* Ajusta el tamaño según lo necesites */
+
+}
+
+
+#contenedor-imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* Evita desplazamientos inesperados */
+}
+
+#imagen-principal {
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    height: 100%; /* Ocupa toda la altura */
+    object-fit: cover; /* Evita distorsión */
+    display: block;
+    margin: 1rem;
+    object-fit: cover;
+}
+
+
+@media (max-width: 1400px) {
+    #contenedor-imagen {
+        display: flex;
+        justify-content:center;
+        align-items:center; 
+        width: 80%;
+        height: 60%;
+        margin: 0 auto; /* Centra el div horizontalmente */
+
+
+    }
+    #imagen-principal {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+
+.seccion {
+    display: flex;
+    flex-direction: column; /* Acomoda los elementos en columna */
+    align-items: center; /* Centra horizontalmente */
+    justify-content: justify; /* Centra verticalmente */
+    gap: 1rem; /* Agrega espacio entre los elementos */
+    text-align: center; /* Asegura que el texto también esté centrado */
+    margin: 1rem; 
+}
+
+.header { 
+
+    color:  #75bc31
+
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    background: black;
+    color: white;
+    margin-top: 5rem;
+    width: 100%;
+}
+
+@media (max-width: 480px) {
+    footer {
+
+        display: block;
+
+    }
+}
+
+.footer-element{
+    display: block;
+    margin: 1rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    padding: 0.5rem;
+}
+
+#lista-enlaces-index{
+    text-align: left;
+    color: #07bed6; 
+    font-size: 1.6rem ;
+    text-decoration: none;
+}
+
+#lista-enlaces-index li a{
+    text-decoration: none;
+    color: #07bed6; 
+}
+
+#lista-enlaces-index li a:hover {
+    text-decoration: underline; /* Subraya al pasar el mouse */
+
+}
+/* ############################### nosotros.html ################################################         */
+
+#foto-salva{
+    width: 80rem;
+    height: 50rem;
+}
+
+.header-rol-en-empresa{
+    color: #07bed6
+}
+
+.col-md-4 img {
+    height: 100%; /* Ocupa toda la altura disponible */
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+}
+
+@media (max-width: 480px){
+    #rol-en-empresa{
+        font-size: 1.2rem;
+    }
+}
+
+
+.fotos-tarjetas{
+    width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+    height: 50rem; /* Ajusta la altura deseada */
+    object-fit: cover; /* Recorta la imagen para llenar el espacio sin deformarla */
+}
+
+/* ############################### servicios.html ################################### */
+
+
+/* ############################### contacto.html #################################### */
+
+.datos-contacto{
+    display: flex;
+    align-items: center;         /* Alinea los elementos verticalmente */
+    margin-left: 2rem;
+
+}
+
+.datos-contacto h2:last-child {
+    margin-left: .5rem;
+}
+
+@media (max-width: 480px){
+
+    .datos-contacto{
+        align-items: flex-start;
+    }
+    .datos-contacto h2{
+        font-size: 1.2rem;
+        margin-left: 0;
+    }
+>>>>>>> fcac38c8d2251218289159b4ea32f29cbee518dc
 }
