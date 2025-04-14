@@ -160,6 +160,28 @@ footer {
 
 /* ############################### servicios.html ################################### */
 
+#header-keywords{
+
+    display: flex;
+    flex-direction: row; /* Acomoda los elementos en columna */
+    align-items: center; /* Centra horizontalmente */
+    justify-content: justify; /* Centra verticalmente */
+
+}
+
+@media (max-width: 480px) {
+    #header-keywords {
+        flex-direction: column;
+    }
+}
+
+#blue-word{
+    color: #07bed6;
+}
+
+#green-word{
+    color: #75bc31;
+}
 
 /* ############################### contacto.html #################################### */
 
