@@ -132,14 +132,6 @@ footer {
 }
 /* ############################### nosotros.html ################################################         */
 
-#foto-salva{
-    width: 80rem;
-    height: 50rem;
-}
-
-.header-rol-en-empresa{
-    color: #07bed6
-}
 
 .col-md-4 img {
     height: 100%; /* Ocupa toda la altura disponible */
@@ -187,6 +179,10 @@ footer {
 
 /* ############################### contacto.html #################################### */
 
+.letra-azul{
+    color: #07bed6
+}
+
 .datos-contacto{
     display: flex;
     align-items: center;         /* Alinea los elementos verticalmente */
@@ -213,7 +209,6 @@ footer {
 /* ############################### portafolio.html #################################### */
 
 
-
 #enlaces-portafolio {
     display: flex;
     flex-direction: row;
@@ -221,13 +216,21 @@ footer {
     gap: 3rem;
     margin: 1rem auto;
     flex-wrap: wrap; /* por si se hace muy estrecho */
+
+
+    background-color: white; 
+    position: sticky;
+    top: 0; 
+    z-index: 1000; 
+
+
 }
 
 @media (max-width: 768px) {
     #enlaces-portafolio {
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
+        gap: 0.2rem; 
     }
 }
 
@@ -243,23 +246,48 @@ footer {
 
 }
 
+/* diseño responsive de headers de cada seccion */
+@media (max-width: 768px) {
+    .header-portafolio {
+        font-size: 2rem;
+    }
+}
+
 .portfolio-examples{
 
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: flex-start;       /* alinea las tarjetas arriba */
-    /* align-content: space-around; */
     gap: 1rem 4rem;
 }
 
 
-/* ######################################################################################################### */
+.tarjeta-proyectos {
+    width:35rem; 
+}
+
+/* diseño responsive de tarjetas de portafolio de proyectos */
+@media (max-width: 768px){
+    .titulo-tarjeta{
+
+        font-size: 1.6rem;
+        
+    }
+    .portfolio-examples{
+        font-size: 1.4rem;
+    }
+    .tarjeta-proyectos{
+        width: 100%; 
+
+    }
+}
 
 .section-blue-background{
     background-color: rgb(219, 231, 235);
     padding: 1rem;
 }
+
 
 /* Imagen + texto (lado a lado) */
 .poster-paragraph {
@@ -288,7 +316,6 @@ footer {
   margin: 20px auto; /* centrado horizontal */
   border-radius: 12px;
   overflow: hidden;
-  background-color: #000; /* fondo neutro */
 }
 
 #carouselConferenceFilos .carousel-inner {
@@ -300,69 +327,12 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: contain; /* no recorta la imagen */
-  background-color: #000;
 }
-
-
-/*  CREEEO QUE ESTO SE BORRARÁ  */
-#posters{
-  /* background-color: blue; */
-  display: flex;
-  justify-content: space-evenly;
-  align-items: stretch; /* hace que ambas columnas tengan el mismo alto */
-  gap: 0.5rem;
-  margin-top: 2rem;
-  width: 100%;
-}
-/*  CREEEO QUE ESTO SE BORRARÁ  */
-.stacked-posters{
-  /* background-color: red; */
-  display: flex;
-  flex-direction: column; /* apila las imágenes verticalmente */
-  justify-content: space-between; /* reparte el espacio de forma uniforme */
-  align-items: stretch;
-  gap: 1rem; /* espacio entre las dos imágenes */
-  flex: 1; 
-  width: 100%;
-}
-
-
-/*  CREEEO QUE ESTO SE BORRARÁ  */
-
-/* Imágenes apiladas */
-.stacked-posters img {
-  width: 100%;        /* ocupa todo el ancho disponible */
-  height: 50%;
-  flex: 1;            /* ambas imágenes crecen igual en altura */
-  /* object-fit: cover;  recorta suavemente si no encaja */
-  border-radius: 10px;
-}
-
-
-
-/*  CREEEO QUE ESTO SE BORRARÁ  */
-/* Solo aplica a la imagen grande fuera del contenedor rojo */
-#posters > img {
-  flex: 1;
-  width: 50%;
-  height: auto;
-  border-radius: 10px;
-  /* object-fit: cover; */
-}
-
-/* ######################################################################################### */
-
 
 #carouselForoRegional {
 
-    max-width: 45% ;
+    width: 45% ;
 
-}
-
-
-.section-green-background{
-    background-color: #e5f5d7;
-    padding: 1rem;
 }
 
 
@@ -373,4 +343,59 @@ footer {
     height: auto;
     margin: 2rem auto;
     border-radius: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1); /* invierte los colores (de blanco a negro) */
+}
+
+.section-green-background{
+    background-color: #e5f5d7;
+    padding: 1rem;
+}
+
+/*  diseño responsive de la sección */
+
+@media (max-width: 768px) {
+  .poster-paragraph {
+    flex-direction: column; /* apila imagen y texto */
+    align-items: center;     /* centra todo horizontalmente */
+    gap: 1.5rem;
+  }
+
+  .poster-paragraph img {
+    width: 90%; /* que ocupe casi todo el ancho disponible */
+  }
+
+  .poster-paragraph p {
+    width: 90%; /* el texto también se ajusta */
+    text-align: justify;
+    font-size: 1.2rem;
+  }
+
+
+  /*  CARRUSELES */
+
+   #carouselConferenceFilos, #carouselForoRegional {
+    width: 95%;
+    max-width: 100%;
+    height: auto;
+  } 
+
+  .carousel-catalog .carousel-inner {
+    max-height: 85vh; /* que casi llene la pantalla sin cortar */
+  }
+
+  .carousel-catalog img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  #video-foro-regional{
+    width: 100%;
+    height: auto;
+  }
+
 }
